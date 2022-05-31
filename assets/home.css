@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Nova+Square&display=swap');
 :root{
-    background-color: rgb(231, 231, 240);
+    background-color: rgb(37, 32, 32);
 }
 * { 
     box-sizing: border-box;
@@ -11,7 +11,8 @@
 }
 
 h1{ 
-    font-size: 5.4rem;  
+    font-size: 5.4rem;
+    color: antiquewhite;  
 }
 
 h2{
@@ -73,3 +74,30 @@ h2{
   transition: transform 150ms;
   transform: scale(1.03);
 }
+
+.btn[:disabled]:hover{
+    cursor:not-allowed;
+    box-shadow:none;
+    transform::none;
+
+}
+
+#highscore-btn{
+    background:linear-gradient(90deg, rgb(211, 212, 114) 0%, rgb(238, 241, 12) 100%); 
+}
+
+.fa-solid{
+    font-size: 2.5rem;
+    margin-left: 1rem;
+}
+
+
+
+
+
+
+
+
+
+
+
