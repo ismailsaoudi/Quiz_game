@@ -24,6 +24,10 @@ body{
     width:100%;
 
 }
+#question{
+    font-size: 2rem;
+    padding: 2rem;
+}
 
 .correct {
     background: linear-gradient(35deg, rgba(11,223,45) 0%, rgb(34, 104, 1) 100%);
@@ -50,6 +54,15 @@ body{
 width: 18rem;
 height: 2.8rem;
 border: 0.3rem solid rgb(64, 172, 14);
+margin-top: 2rem;
+border-radius: 50px;
+overflow: hidden;
+}
+#progressBarFull{
+    height: 100%;
+    background: rgb(64, 172, 14);
+    width: 0%;
+
 }
 
 @media screen and (max-width: 768px){
