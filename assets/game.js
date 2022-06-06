@@ -53,14 +53,15 @@ var questions = [
 var score_points = 100
 var max_questions = 4
 
-function startGame = () => {
+startGame = () => {
 questionCounter = 0
 score = 0
 availableQuestions = [...questions]
 getNewQuestion ()
+console.log(startGame)
 }
 
-function getNewQuestion = () => {
+getNewQuestion = () => {
 
     if (availableQuestions.length === 0 || questionCounter > max_questions){
         localStorage.setItem('mostRecentScore', score)
