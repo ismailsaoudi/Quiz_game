@@ -50,3 +50,36 @@ var questions = [
 
 ]
 
+var score_points = 100
+var max_questions = 4
+
+function startGame = () => {
+questionCounter = 0
+score = 0
+availableQuestions = [...questions]
+getNewQuestion ()
+}
+
+function getNewQuestion = () => {
+
+    if (availableQuestions.length === 0 || questionCounter > max_questions){
+        localStorage.setItem('mostRecentScore', score)
+    }
+
+
+questionCounter++
+progressText.innerText = `question ${questionCounter} of ${max_questions}`
+progressBarFull.style.width = `${(questionCounter/max_questions)* 100%}`
+
+var questionIndex = Math.floor(math.random() * availableQuestions.length)
+currentQuestion = availableQuestions[questionIndex]
+question.innerText = currentQuestion.question
+
+choices.forEach(choice => {
+    var number = choice.dataset ['number']
+    choice.innerText = currentQuestion['choice'+ number]
+})
+availableQuestions.splice(questionIndex, 1)
+acceptingAnswers = true
+
+}
