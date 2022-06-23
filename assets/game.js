@@ -18,7 +18,7 @@ var questions = [
         b: 'Jerin',
         c: 'Jimmy',
         d: 'None',
-          correctAnswer: c
+        Answer: c
     },
 
 
@@ -28,7 +28,7 @@ var questions = [
         b: '2nd',
         c: '3rd',
         d: 'None of the bove',
-          correctAnswer: c
+        Answer: c
     },
     {
         question: "How many months have 28 days?",
@@ -36,7 +36,7 @@ var questions = [
         b: '1',
         c: 'All Of them',
         d: "Depends if there's a leap year or not",
-        correctAnswer: c
+        Answer: c
 
     },
     {
@@ -45,7 +45,7 @@ var questions = [
         b: '20',
         c: '39',
         d: "0.5",
-        correctAnswer: a
+        Answer: a
     }
 
 ]
@@ -69,8 +69,8 @@ getNewQuestion = () => {
 
 
 questionCounter++
-progressText.innerText = `question ${questionCounter} of ${max_questions}`
-progressBarFull.style.width = `${(questionCounter/max_questions)* 100%}`
+progressText.innerText = `Question ${questionCounter} of ${max_questions}`
+progressBarFull.style.width = `${(questionCounter / max_questions) * 100} %`
 
 var questionIndex = Math.floor(math.random() * availableQuestions.length)
 currentQuestion = availableQuestions[questionIndex]
@@ -81,6 +81,31 @@ choices.forEach(choice => {
     choice.innerText = currentQuestion['choice'+ number]
 })
 availableQuestions.splice(questionIndex, 1)
-acceptingAnswers = true
 
+acceptingAnswers = true
 }
+
+choices.forEach(choice => {
+    choice.addeventlistener('click', e=> {
+        if(!acceptingAnswers) true
+
+        acceptingAnswers = false
+        var selectedChoice= e.target
+        var slectedAnswer= selectedChoice.dataset['number']
+        let classToApply= slectedAnswer == currentQuestion.Answer ? 'correct':
+'incorrect'
+
+
+        if (classToApply === 'correct'){
+            incrementScore(score_points)      
+        }
+
+        selectedChoice.parentElement.classList.add(classToApply)
+
+        setTimeout(() => {
+            selectedChoice.parentElement.classList.remove(classToApply)
+            getNewQuestion
+        },1000)
+    })
+})
+
