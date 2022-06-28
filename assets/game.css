@@ -72,4 +72,10 @@ overflow: hidden;
 }
 
 
-      
+      #timer{
+        font-size: x-large;
+        padding-left: 500px;
+        margin-bottom: 0px;
+        margin-top: 200px;
+
+      }
