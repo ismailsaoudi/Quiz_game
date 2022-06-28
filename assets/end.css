@@ -76,26 +76,19 @@ h2{
   transform: scale(1.03);
 }
 
-.btn[:disabled]:hover{
+.btn[disabled]:hover{
     cursor:not-allowed;
-    box-shadow:none;
-    transform::none;
-
 }
 
 
-.fa-solid{
-    font-size: 2.5rem;
-    margin-left: 1rem;
-}
 
 input[type=text], select {
-    width: 100%;
+    width: 300px;
     padding: 12px 20px;
     margin: 8px 0;
     display: inline-block;
     border: 1px solid #ccc;
     border-radius: 4px;
-    box-sizing: border-box;
+    box-sizing: border-box;   
   }
 

@@ -3,7 +3,7 @@
     background-color: rgb(37, 32, 32);
     color: antiquewhite;
 }
-* { 
+* {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
@@ -11,9 +11,9 @@
     font-family: 'Nova Square', cursive ;
 }
 
-h1{ 
+h1{
     font-size: 5.4rem;
-    color: antiquewhite;  
+    color: antiquewhite;
 }
 
 h2{
@@ -22,7 +22,7 @@ h2{
 }
 .container{
     width: 100vw;
-    height: 100vh;
+    /* height: 100vh; */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -71,7 +71,7 @@ h2{
 
 .btn:hover{
   cursor: pointer;
-  box-shadow: 0 0.4rem 0 rgba(67, 75, 94, 0.6); 
+  box-shadow: 0 0.4rem 0 rgba(67, 75, 94, 0.6);
   transition: transform 150ms;
   transform: scale(1.03);
 }
@@ -84,7 +84,7 @@ h2{
 }
 
 #highscore-btn{
-    background:linear-gradient(90deg, rgb(211, 212, 114) 0%, rgb(238, 241, 12) 100%); 
+    background:linear-gradient(90deg, rgb(211, 212, 114) 0%, rgb(238, 241, 12) 100%);
 }
 
 .fa-solid{
