@@ -104,9 +104,9 @@ choices.forEach((choice) => {
         selectedChoice.parentElement.classList.add(classToApply);
 
         setTimeout(() => {
-            selectedChoice.parentElement.classList.remove(classToApply);
-            getNewQuestion();
-        }, 1000);
+         selectedChoice.parentElement.classList.remove(classToApply);
+        getNewQuestion();
+         }, 1000);
     });
 });
 
@@ -116,10 +116,11 @@ incrementScore = (num) => {
 };
 
 
-var sec = 20;
+var sec = 25;
 var time = setInterval(myTimer, 1000);
 
 function myTimer() {
+
     document.getElementById('timer').innerHTML = sec + "sec left";
     sec--;
     if (sec == -1) {
@@ -127,5 +128,10 @@ function myTimer() {
         alert("Time out!! :(");
     }
 }
+
+var increaseCorrect = sec ++ 
+var decreaseIncorrect 
+
+
 
 
